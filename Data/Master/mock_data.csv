@@ -1,0 +1,1001 @@
+employee_id,age,department,years_at_company,monthly_income,job_satisfaction,performance_rating,work_life_balance,training_hours_last_year,attrition
+1,28,Engineering,10,42527.46,10,3,5,6,false
+2,30,Accounting,26,352240.56,5,2,4,117,false
+3,29,HR,24,151071.46,8,5,4,124,false
+4,42,HR,7,370394.07,6,3,1,195,false
+5,31,Customer Service,6,36522.07,5,2,3,57,false
+6,32,Engineering,11,382774.69,5,5,5,136,false
+7,39,Engineering,16,492264.0,6,1,1,63,true
+8,37,Sales,10,231784.59,10,4,4,109,true
+9,47,Sales,6,126619.07,6,3,5,74,true
+10,23,Customer Service,9,417702.96,8,4,5,117,false
+11,42,Engineering,11,77967.88,6,1,5,83,true
+12,33,Engineering,14,473203.46,5,1,5,161,false
+13,22,Accounting,16,51081.85,7,4,2,14,false
+14,31,Accounting,20,205091.14,8,2,1,173,true
+15,46,Engineering,2,436682.29,4,5,5,160,true
+16,34,Engineering,24,195168.17,9,4,2,177,false
+17,40,Engineering,20,454079.4,8,2,3,106,false
+18,25,Accounting,24,441618.68,5,1,1,161,true
+19,45,HR,10,81846.95,9,4,4,15,true
+20,28,Engineering,9,338316.08,10,1,4,22,true
+21,35,Engineering,24,309330.52,3,5,3,142,true
+22,29,Customer Service,27,413913.21,3,2,4,162,true
+23,33,Engineering,24,229772.81,4,3,2,159,false
+24,47,Sales,2,487888.72,7,5,5,3,true
+25,50,Accounting,12,248736.36,2,3,5,179,true
+26,29,Engineering,16,382353.67,2,1,5,186,true
+27,48,Engineering,12,468593.51,5,3,3,88,false
+28,26,HR,10,348692.45,4,5,1,153,false
+29,34,Engineering,22,36025.26,6,5,5,26,true
+30,41,Sales,8,351796.87,4,5,3,192,true
+31,39,Engineering,17,342399.52,1,1,4,72,false
+32,33,Engineering,6,209922.07,7,5,1,8,true
+33,22,Engineering,23,109362.83,9,5,1,164,false
+34,35,Engineering,15,408918.48,3,3,5,70,true
+35,24,Accounting,20,380538.9,3,1,2,146,true
+36,31,Engineering,10,112841.86,8,5,5,19,false
+37,37,Accounting,9,395466.46,8,4,3,122,false
+38,50,Engineering,6,272212.71,5,3,5,6,true
+39,22,Engineering,8,274527.76,2,1,1,77,true
+40,32,Engineering,20,86517.65,9,1,3,19,false
+41,33,Customer Service,12,173387.19,1,3,2,90,false
+42,30,HR,20,81650.48,6,1,2,78,false
+43,31,Accounting,7,106107.94,8,5,4,185,false
+44,47,Sales,25,470690.09,7,3,3,198,false
+45,33,HR,5,43893.15,10,2,1,20,false
+46,43,Accounting,27,444969.82,1,2,4,16,true
+47,38,HR,20,215510.58,4,4,5,30,false
+48,29,Accounting,18,97850.37,3,2,4,102,true
+49,35,Accounting,8,40687.51,3,5,1,197,true
+50,26,Accounting,20,260581.38,3,5,5,119,true
+51,43,Accounting,2,411546.37,5,3,4,122,true
+52,36,Accounting,28,423278.44,8,5,2,115,true
+53,48,Sales,15,41905.56,9,3,2,26,true
+54,41,Sales,13,68932.32,5,5,5,78,false
+55,38,Engineering,24,52144.8,1,2,2,130,true
+56,30,Accounting,15,302214.4,4,5,2,133,false
+57,25,Engineering,22,78999.25,5,1,2,117,true
+58,40,Customer Service,27,465952.24,2,5,5,45,false
+59,24,Engineering,9,451355.7,3,4,2,5,false
+60,25,Customer Service,24,96967.14,2,5,1,159,false
+61,39,Accounting,10,280145.16,8,2,1,159,true
+62,25,Engineering,21,472091.29,6,5,1,194,true
+63,23,Accounting,9,298924.67,4,5,5,6,false
+64,22,Engineering,28,236658.73,7,4,1,171,true
+65,35,Engineering,24,192561.0,4,3,5,48,false
+66,41,Engineering,18,135455.14,10,1,5,185,true
+67,50,Accounting,23,280990.64,8,4,3,115,true
+68,49,Accounting,21,323889.44,5,1,2,133,false
+69,47,Engineering,15,325184.51,1,2,5,55,false
+70,40,Engineering,12,306208.36,8,1,2,18,false
+71,49,Customer Service,10,440275.63,9,2,3,8,false
+72,21,HR,20,43833.14,6,2,5,102,false
+73,24,Accounting,11,196801.48,8,3,2,95,false
+74,46,Accounting,8,331659.5,9,3,2,179,true
+75,36,Accounting,3,281040.66,8,1,1,34,false
+76,41,HR,4,232906.83,9,3,2,52,true
+77,48,Engineering,8,316772.13,1,3,4,190,false
+78,32,Accounting,13,455381.26,9,2,3,197,true
+79,21,Customer Service,20,176224.86,5,5,2,36,false
+80,29,Engineering,11,375194.7,2,1,5,105,true
+81,31,Engineering,18,192607.13,10,4,1,9,true
+82,41,Engineering,17,177572.05,8,5,4,179,true
+83,44,Engineering,4,42126.69,9,2,2,147,false
+84,27,Engineering,26,397366.62,6,1,1,66,true
+85,39,Sales,17,36259.57,5,4,1,77,false
+86,39,Customer Service,20,491400.51,7,4,2,28,false
+87,47,Engineering,29,49710.36,6,1,4,181,true
+88,36,Accounting,11,289317.74,8,3,5,155,true
+89,34,Engineering,28,393881.06,4,5,3,145,false
+90,31,Accounting,5,410915.91,5,4,4,28,false
+91,33,Accounting,5,361259.3,1,1,3,121,false
+92,50,Engineering,8,440187.18,7,5,1,154,true
+93,27,Accounting,20,102485.44,10,5,2,34,false
+94,40,Accounting,16,246077.62,1,1,2,128,false
+95,23,Engineering,4,210816.15,3,4,3,61,false
+96,23,Accounting,23,456734.78,2,5,5,181,false
+97,24,Engineering,8,64033.92,9,3,4,49,true
+98,29,HR,6,443263.97,5,1,5,96,false
+99,31,Customer Service,9,169797.42,3,3,5,8,false
+100,30,HR,13,365040.13,5,2,3,109,false
+101,25,HR,17,261818.87,5,3,5,58,false
+102,31,Engineering,23,421987.9,3,4,1,35,false
+103,46,Engineering,18,30861.93,7,1,5,62,false
+104,46,HR,10,69160.28,8,1,2,34,true
+105,41,HR,8,62785.1,5,5,3,46,false
+106,39,HR,11,45584.36,5,4,5,53,false
+107,22,Engineering,28,423478.05,5,4,4,138,false
+108,21,Accounting,17,53543.75,8,1,1,188,true
+109,31,Customer Service,16,347705.4,6,2,3,70,false
+110,32,Engineering,3,35336.41,8,2,5,198,true
+111,34,Accounting,5,231729.88,1,3,2,126,false
+112,29,Customer Service,5,33202.96,6,4,2,150,false
+113,46,Sales,19,282997.92,7,5,4,38,true
+114,44,Accounting,25,401294.33,7,4,4,104,true
+115,48,Engineering,10,110696.4,6,5,5,121,false
+116,50,Engineering,18,343931.01,1,3,4,151,false
+117,38,Accounting,6,139744.92,1,3,4,105,false
+118,37,Accounting,13,79873.65,3,2,1,90,false
+119,27,Engineering,29,444686.74,9,5,4,22,false
+120,25,Sales,12,168607.91,6,5,3,4,true
+121,30,Accounting,7,429495.74,1,1,5,90,false
+122,30,Engineering,15,282249.77,8,1,3,158,false
+123,45,Engineering,24,227392.08,3,4,4,175,true
+124,38,Accounting,6,295539.77,10,4,3,69,true
+125,36,Engineering,7,331361.11,8,3,1,148,false
+126,50,Accounting,23,270512.74,1,1,4,14,true
+127,50,HR,26,344795.56,8,4,1,140,true
+128,38,Sales,12,222712.11,10,5,5,119,true
+129,24,Accounting,6,489350.61,6,5,2,84,false
+130,34,HR,2,284817.17,3,4,4,69,true
+131,44,Engineering,14,170841.27,3,3,4,9,false
+132,24,Sales,22,453597.15,3,2,2,62,true
+133,24,Engineering,13,117138.68,2,5,4,72,false
+134,32,Sales,29,294674.06,1,3,4,110,false
+135,42,Accounting,26,119600.73,9,4,4,6,true
+136,36,HR,28,319082.88,5,5,4,28,false
+137,37,Engineering,6,260939.29,2,2,2,130,false
+138,30,Engineering,12,53768.64,7,5,2,123,false
+139,44,Customer Service,27,285217.92,9,3,1,74,false
+140,32,Engineering,26,148831.68,5,2,1,174,false
+141,48,HR,27,416419.25,4,1,2,51,false
+142,43,Sales,12,247031.98,10,5,1,168,false
+143,45,Accounting,25,214505.45,5,3,4,152,false
+144,22,Accounting,26,139309.33,3,4,3,169,false
+145,23,Engineering,6,227433.26,5,5,3,21,true
+146,23,Accounting,12,300975.2,2,2,3,29,false
+147,42,Sales,15,444585.35,9,1,4,47,true
+148,30,Engineering,4,241945.48,7,3,2,29,true
+149,39,Engineering,24,58923.16,9,3,2,109,true
+150,42,Sales,7,472589.07,1,3,4,91,true
+151,41,Engineering,24,235398.73,5,1,4,38,true
+152,26,Engineering,17,279407.8,1,1,5,34,true
+153,44,Engineering,23,416914.71,2,4,5,154,false
+154,38,Accounting,26,118658.04,6,2,3,177,false
+155,30,Sales,9,182192.09,6,3,1,24,false
+156,44,Engineering,16,68806.16,2,3,3,67,false
+157,47,Engineering,18,439002.52,7,1,2,136,false
+158,25,Customer Service,14,248961.5,4,2,4,107,true
+159,32,Engineering,6,373556.02,4,5,5,125,false
+160,22,Engineering,29,297635.42,5,4,5,156,true
+161,21,Customer Service,13,114960.68,3,1,4,62,false
+162,40,Engineering,11,276978.27,3,4,1,178,false
+163,27,Engineering,29,176294.55,5,4,5,9,false
+164,36,Customer Service,17,281313.58,6,1,1,54,false
+165,28,Engineering,16,359978.27,7,3,2,7,true
+166,39,Customer Service,14,314374.96,4,5,5,80,false
+167,24,HR,18,93411.03,8,3,4,198,true
+168,22,Sales,12,357603.3,4,3,3,106,true
+169,38,Accounting,16,283474.45,3,5,4,89,true
+170,36,Customer Service,13,32675.56,5,4,4,167,false
+171,47,Sales,29,254711.44,3,1,3,38,true
+172,23,Sales,16,239835.6,7,3,2,23,false
+173,42,HR,12,262307.82,10,4,1,161,false
+174,26,Customer Service,28,99726.03,1,5,1,166,true
+175,30,Accounting,16,490711.98,8,5,3,175,true
+176,26,Sales,2,442075.48,9,2,4,109,true
+177,33,Customer Service,28,171169.68,5,4,2,22,false
+178,46,Customer Service,4,411196.42,9,5,2,4,false
+179,50,Sales,16,80484.17,10,5,1,141,true
+180,31,Engineering,8,466609.72,3,5,3,96,true
+181,33,Engineering,27,316580.83,3,1,1,165,false
+182,24,Customer Service,21,468084.27,5,3,2,11,false
+183,41,Customer Service,19,86247.57,3,5,4,142,false
+184,41,Sales,14,57828.66,5,2,2,39,true
+185,32,Accounting,17,168120.96,5,1,1,69,false
+186,25,Accounting,8,253511.0,9,3,5,113,false
+187,48,Engineering,28,350078.54,4,5,5,88,true
+188,34,Accounting,11,99674.21,6,3,4,48,false
+189,34,Sales,21,53241.95,4,2,1,97,false
+190,30,HR,18,433281.08,7,1,2,88,true
+191,34,Accounting,12,415683.05,8,4,2,2,true
+192,24,Engineering,4,103639.16,5,3,4,12,false
+193,22,Engineering,18,197138.2,7,2,1,151,false
+194,39,Sales,5,281566.74,3,1,1,5,false
+195,39,Accounting,29,43159.94,10,3,3,90,false
+196,50,Sales,5,168162.42,1,2,4,157,true
+197,25,Engineering,3,292369.06,4,4,4,173,false
+198,43,Accounting,9,488679.29,8,2,5,153,false
+199,25,Engineering,3,466778.1,8,2,2,58,true
+200,36,Engineering,27,466672.68,4,4,4,148,true
+201,24,Accounting,21,286814.3,2,5,4,166,true
+202,44,HR,22,166746.57,10,3,4,164,false
+203,50,Sales,15,402341.15,9,4,4,137,false
+204,38,Accounting,20,401528.55,2,5,2,120,false
+205,34,Sales,10,404506.06,10,3,1,37,true
+206,29,Sales,2,48108.61,8,2,2,70,true
+207,39,HR,23,249675.97,4,4,3,11,true
+208,28,Customer Service,9,133589.19,6,3,2,178,false
+209,41,Sales,3,457940.88,2,2,3,128,true
+210,41,Engineering,5,335261.98,3,5,3,173,true
+211,31,Engineering,21,384022.47,2,3,2,115,true
+212,44,Engineering,2,491702.26,3,1,2,16,true
+213,22,Engineering,29,355085.57,1,2,1,60,true
+214,37,Customer Service,19,306794.64,1,3,1,48,true
+215,21,Engineering,16,180106.1,1,5,3,83,true
+216,25,Accounting,26,358499.32,9,1,2,16,true
+217,48,Accounting,22,129796.97,7,5,3,29,false
+218,30,HR,6,89166.37,8,1,4,4,true
+219,36,Sales,24,149143.48,3,2,3,84,true
+220,49,Accounting,25,238949.43,5,5,1,1,false
+221,45,Accounting,14,255723.23,8,3,1,58,false
+222,34,Engineering,13,318379.2,8,4,5,180,true
+223,41,Accounting,20,174043.88,4,2,5,54,false
+224,30,Engineering,13,222836.74,5,5,3,102,false
+225,46,Engineering,5,147887.2,2,3,4,28,false
+226,21,Customer Service,14,348656.62,6,4,5,108,true
+227,48,Customer Service,3,58537.11,3,5,4,66,false
+228,22,Accounting,6,147447.22,1,1,1,107,true
+229,40,Sales,22,232560.94,10,2,3,4,false
+230,38,HR,8,166206.07,2,1,4,72,true
+231,28,Sales,6,380674.24,7,4,5,113,true
+232,29,Engineering,27,70080.61,10,4,3,158,false
+233,50,Accounting,15,256301.38,9,2,1,122,false
+234,28,Accounting,7,212377.94,5,3,2,105,false
+235,40,Engineering,28,126777.76,7,5,4,117,true
+236,28,HR,13,431228.66,1,3,4,91,false
+237,24,Customer Service,14,318260.89,6,2,2,105,true
+238,21,Accounting,26,288770.95,2,5,2,118,true
+239,44,Engineering,21,349307.02,4,1,1,39,true
+240,45,HR,18,299632.7,3,5,5,174,true
+241,34,Accounting,2,441460.31,4,1,2,40,true
+242,47,Accounting,26,129858.39,1,4,2,72,true
+243,32,Engineering,24,424199.53,4,3,4,147,true
+244,32,HR,15,438935.85,8,3,2,27,false
+245,39,HR,22,350966.79,1,1,4,171,true
+246,34,Accounting,8,252394.12,6,4,3,180,false
+247,43,Sales,13,142944.95,7,5,1,8,false
+248,49,Accounting,17,224744.46,2,1,1,131,false
+249,36,Sales,9,328740.02,8,5,2,148,false
+250,34,HR,26,376939.68,2,5,4,196,false
+251,37,Accounting,9,365760.42,3,4,1,151,false
+252,45,Engineering,18,497717.21,10,2,3,7,true
+253,25,Engineering,5,383234.23,10,2,3,163,true
+254,26,Engineering,2,283208.01,2,2,1,71,true
+255,43,Accounting,29,223193.75,5,2,5,57,true
+256,38,Accounting,2,158503.91,8,2,5,2,true
+257,30,Accounting,4,311670.53,3,4,2,52,false
+258,35,Sales,9,153799.8,5,1,2,23,false
+259,50,Engineering,9,39878.94,8,3,4,83,false
+260,23,Engineering,15,47197.61,4,1,2,138,true
+261,47,Engineering,23,204693.47,3,2,4,125,false
+262,29,Engineering,25,195230.63,2,3,2,127,true
+263,33,Engineering,17,137960.87,5,3,4,130,true
+264,24,Accounting,23,80253.55,9,2,4,124,true
+265,47,Accounting,22,466359.8,3,3,4,110,true
+266,28,Accounting,26,496424.1,7,1,4,167,false
+267,22,Sales,17,396670.56,5,4,4,46,false
+268,45,Engineering,13,423877.47,2,4,5,74,true
+269,23,Engineering,28,155719.41,8,5,4,98,true
+270,47,Accounting,17,229587.74,8,4,4,3,true
+271,26,Sales,17,223877.44,2,4,5,69,false
+272,37,Engineering,6,206449.75,1,3,3,43,false
+273,46,Accounting,16,158656.88,8,3,3,39,true
+274,32,Accounting,3,184011.43,7,3,2,30,true
+275,31,HR,7,171030.4,6,1,4,102,true
+276,50,Sales,11,88544.66,1,5,1,187,false
+277,38,Customer Service,8,51603.86,4,5,2,139,true
+278,24,Customer Service,24,318991.65,8,2,2,194,true
+279,33,Accounting,7,426976.16,1,5,1,149,false
+280,48,Accounting,22,416193.82,9,2,3,159,false
+281,31,Sales,25,184197.06,4,4,5,189,false
+282,42,Accounting,12,119900.21,8,5,5,54,true
+283,40,HR,28,188504.49,4,1,4,72,false
+284,47,Engineering,16,254230.98,10,2,3,143,true
+285,48,Accounting,7,111863.11,6,2,5,96,true
+286,30,Customer Service,21,108493.17,2,2,1,91,true
+287,27,Accounting,18,447791.13,6,1,2,104,false
+288,49,Accounting,15,301352.56,5,2,4,131,false
+289,40,Accounting,10,117402.19,6,2,2,23,false
+290,33,Customer Service,17,491318.81,1,1,4,161,false
+291,49,Accounting,7,446239.57,10,1,4,132,false
+292,31,Accounting,4,322882.47,6,5,4,56,true
+293,34,Sales,29,230058.82,1,5,2,167,true
+294,28,Accounting,17,329005.7,9,4,4,98,true
+295,33,Customer Service,9,254593.84,3,4,1,94,true
+296,26,Engineering,16,175966.65,9,2,2,64,false
+297,36,Sales,10,295889.17,8,1,3,173,false
+298,21,Engineering,8,437231.33,10,5,1,101,true
+299,47,Engineering,3,465429.89,10,5,3,97,true
+300,40,Engineering,14,300387.07,5,3,4,134,true
+301,32,Customer Service,8,128321.38,6,4,4,37,false
+302,37,Customer Service,17,434037.04,5,1,3,152,true
+303,37,Accounting,23,407527.78,4,3,4,104,true
+304,47,HR,24,43710.33,7,5,3,168,false
+305,50,HR,24,451410.71,1,5,3,31,true
+306,36,Engineering,17,481662.29,9,5,2,186,false
+307,44,Engineering,23,345279.81,8,1,5,105,false
+308,41,Accounting,23,135605.15,10,4,3,200,true
+309,41,Engineering,18,353162.54,1,3,2,157,true
+310,43,Engineering,6,195521.05,6,1,4,94,true
+311,40,Engineering,29,472682.94,5,1,4,64,true
+312,43,HR,22,207137.25,7,4,1,151,false
+313,28,Accounting,22,107676.76,1,2,5,145,false
+314,26,HR,25,445148.89,4,1,2,84,false
+315,39,Engineering,19,193309.65,10,5,3,133,true
+316,36,Accounting,16,72610.22,9,5,5,62,false
+317,30,Sales,15,469802.95,2,4,2,13,true
+318,28,HR,4,323579.64,6,4,3,3,true
+319,27,Engineering,27,455352.7,7,5,2,60,true
+320,21,Engineering,13,216610.67,2,2,5,198,true
+321,24,Engineering,18,207851.81,9,3,2,197,true
+322,39,Engineering,3,123688.1,6,4,2,53,true
+323,22,Accounting,28,341529.54,3,4,2,39,true
+324,28,Customer Service,4,313209.46,10,5,2,112,true
+325,24,Engineering,12,166485.13,8,4,3,119,false
+326,37,Customer Service,4,90657.78,1,3,5,118,false
+327,50,Customer Service,16,191018.76,3,3,2,61,true
+328,50,Engineering,22,373104.29,3,3,3,107,false
+329,31,Accounting,20,66625.21,9,4,4,184,false
+330,38,Sales,15,429769.04,2,3,3,90,true
+331,41,Sales,2,319525.75,4,5,2,91,true
+332,35,Customer Service,27,233694.33,1,5,3,156,false
+333,40,HR,26,51802.59,4,2,3,1,true
+334,50,Engineering,14,470955.09,4,3,1,23,true
+335,45,Engineering,25,239987.33,4,4,4,180,false
+336,43,HR,24,435986.28,3,1,5,146,true
+337,42,Customer Service,18,291866.47,10,2,1,47,true
+338,50,Engineering,25,318463.17,10,4,3,192,false
+339,45,HR,29,346593.78,4,5,5,76,false
+340,39,HR,8,306897.53,1,3,5,74,true
+341,24,Sales,10,226529.09,5,5,1,176,true
+342,27,Customer Service,27,462181.76,2,3,4,72,true
+343,42,Sales,9,447115.23,7,5,4,87,true
+344,44,HR,11,410755.95,2,2,4,17,true
+345,30,Accounting,5,266625.51,9,1,3,129,true
+346,39,HR,10,335199.81,2,2,2,137,false
+347,26,Sales,20,379673.41,5,3,4,22,true
+348,33,HR,19,450234.57,2,3,1,179,true
+349,32,Accounting,25,176508.97,10,1,1,29,true
+350,43,Customer Service,12,294175.65,1,1,5,25,true
+351,27,Customer Service,23,120227.57,4,3,5,80,true
+352,28,HR,16,220486.95,5,1,4,157,false
+353,49,Customer Service,22,142504.14,3,2,2,42,true
+354,29,Accounting,7,410468.43,2,2,4,76,false
+355,35,Customer Service,19,58326.09,4,1,5,10,true
+356,42,Accounting,17,91834.64,6,3,5,163,true
+357,35,Sales,27,238181.01,6,1,2,98,false
+358,28,Engineering,19,300368.13,2,4,5,137,true
+359,22,HR,15,331239.74,9,4,3,100,true
+360,27,Engineering,25,306732.76,4,1,3,17,true
+361,30,Customer Service,25,221007.35,2,3,5,162,true
+362,23,Customer Service,11,272059.25,7,5,4,132,true
+363,29,Engineering,28,201656.54,7,3,3,31,false
+364,38,Engineering,6,427482.37,4,4,4,126,true
+365,30,HR,4,483260.89,5,3,1,147,false
+366,35,Accounting,17,337453.37,5,2,4,93,false
+367,41,HR,20,153877.08,9,1,4,159,true
+368,46,Accounting,23,464919.65,2,5,5,129,false
+369,43,HR,20,67530.52,8,5,1,200,false
+370,24,Accounting,10,174244.56,3,1,4,65,false
+371,24,Engineering,16,365257.49,5,5,1,4,true
+372,47,Accounting,18,377812.21,5,5,4,177,true
+373,28,Sales,18,303102.05,9,4,3,39,false
+374,39,Accounting,12,201920.84,5,3,1,155,false
+375,35,Sales,26,208567.34,5,1,3,29,false
+376,35,Engineering,7,224173.39,9,4,2,52,false
+377,21,Engineering,28,332228.35,3,3,2,41,true
+378,22,Accounting,14,266228.78,8,5,4,57,true
+379,40,Customer Service,25,116846.43,4,3,5,33,false
+380,30,HR,24,266836.05,5,5,1,1,true
+381,26,Engineering,3,496031.57,3,4,3,63,true
+382,29,Accounting,25,425670.09,5,5,1,189,false
+383,31,Sales,5,443349.58,9,1,4,174,true
+384,32,HR,19,431309.33,7,4,3,7,false
+385,37,Engineering,10,80920.27,7,5,4,93,true
+386,28,Accounting,14,219136.6,4,3,1,174,true
+387,47,Engineering,3,431807.35,1,1,2,21,true
+388,43,Accounting,7,388723.28,6,5,4,70,true
+389,41,Accounting,18,77537.86,6,1,3,123,true
+390,21,Accounting,3,361871.59,4,5,3,50,false
+391,30,Engineering,10,38359.73,5,1,4,195,false
+392,40,Accounting,23,197517.88,7,5,1,164,false
+393,50,Engineering,15,121483.05,7,5,2,31,false
+394,29,Engineering,18,348602.58,3,4,5,99,false
+395,49,Customer Service,6,407618.96,8,5,2,10,true
+396,33,Engineering,10,140265.39,5,2,3,155,true
+397,50,Engineering,3,264559.02,6,4,2,49,false
+398,26,Accounting,29,398978.41,6,2,3,184,false
+399,37,Accounting,4,357749.3,5,5,3,104,false
+400,33,Customer Service,7,248755.98,5,2,2,27,false
+401,29,Engineering,25,110610.67,3,5,5,167,false
+402,41,Accounting,9,480566.6,9,2,4,195,true
+403,34,Engineering,17,112880.88,8,5,5,116,false
+404,24,Accounting,29,233003.37,1,2,2,171,false
+405,33,HR,26,286741.62,2,3,4,185,false
+406,38,Engineering,18,346974.87,7,3,3,6,true
+407,44,Engineering,18,443979.16,8,3,2,180,false
+408,37,Accounting,9,377388.81,7,2,3,123,false
+409,30,Engineering,21,69067.38,1,2,1,83,false
+410,46,Accounting,12,388863.48,2,4,4,125,true
+411,31,Engineering,15,366843.67,4,5,2,128,false
+412,23,Sales,7,454648.66,6,4,5,140,true
+413,30,Engineering,28,364291.65,6,1,1,78,true
+414,40,HR,20,348014.72,9,2,4,177,false
+415,30,Customer Service,26,316843.89,9,1,2,45,false
+416,46,Engineering,24,377066.52,10,3,1,152,false
+417,46,Engineering,22,484856.58,3,5,3,179,true
+418,26,Accounting,12,153886.88,6,2,2,82,true
+419,39,Engineering,9,126151.55,10,2,2,132,true
+420,45,Accounting,11,368191.46,6,4,2,18,false
+421,21,HR,20,44281.19,6,1,4,28,false
+422,31,Engineering,27,208431.7,3,4,3,13,false
+423,29,Customer Service,7,406435.64,6,3,4,24,true
+424,45,Accounting,16,213187.99,9,2,5,54,true
+425,34,Engineering,6,255846.96,10,2,5,25,true
+426,46,HR,18,367132.92,4,5,4,11,false
+427,35,Engineering,10,427110.68,5,2,4,113,true
+428,21,Sales,9,90587.75,2,3,2,96,false
+429,45,Engineering,28,80717.56,2,3,1,183,false
+430,37,Customer Service,28,473795.12,1,5,3,53,false
+431,24,Engineering,28,136006.67,1,2,2,23,true
+432,44,Customer Service,29,95529.69,8,5,4,9,true
+433,46,HR,2,273423.78,5,4,4,45,false
+434,36,HR,17,58455.41,10,2,5,77,true
+435,33,Accounting,4,30693.55,5,2,5,25,false
+436,41,HR,19,437155.75,4,4,3,79,true
+437,23,Engineering,4,42507.15,3,3,2,195,true
+438,34,Engineering,19,35295.3,4,4,5,36,false
+439,29,Customer Service,9,260163.23,2,2,1,180,false
+440,29,Customer Service,22,484236.82,8,1,1,144,true
+441,30,Engineering,17,130896.71,9,5,1,85,false
+442,40,Engineering,21,195623.62,9,2,1,56,true
+443,28,Engineering,14,325522.56,4,2,5,132,true
+444,34,Customer Service,5,489742.85,4,4,3,72,false
+445,29,Customer Service,11,280295.89,1,3,5,199,false
+446,32,Engineering,26,104228.26,5,5,2,22,false
+447,38,Engineering,4,36592.46,2,2,3,117,false
+448,47,Engineering,2,289520.58,4,2,2,141,true
+449,48,Customer Service,19,168258.43,2,1,1,46,true
+450,47,Customer Service,23,362459.63,3,3,2,23,true
+451,24,Engineering,6,110018.26,1,4,3,78,true
+452,23,Accounting,28,118728.59,4,4,1,67,false
+453,37,Engineering,4,212370.15,3,2,5,86,false
+454,24,Accounting,10,211826.18,8,1,4,94,false
+455,34,Engineering,24,60785.57,4,3,2,142,false
+456,22,Accounting,15,69658.78,1,2,3,48,true
+457,39,HR,16,181082.67,10,4,4,183,true
+458,36,Engineering,29,196802.13,10,2,4,179,true
+459,31,Accounting,20,205029.74,8,5,3,179,false
+460,30,HR,21,499971.15,9,3,3,159,true
+461,32,Accounting,12,220298.06,10,5,3,25,false
+462,50,Customer Service,3,123831.35,4,2,1,77,true
+463,45,Sales,25,314955.12,8,5,4,45,false
+464,22,Accounting,7,94916.36,10,1,5,60,true
+465,22,Engineering,29,474106.32,4,4,5,179,false
+466,44,Engineering,6,298506.47,10,3,3,149,false
+467,42,Engineering,19,151951.8,4,3,4,111,false
+468,23,Engineering,16,135227.97,3,5,4,8,true
+469,34,Customer Service,13,139261.69,1,1,5,116,true
+470,48,HR,25,190991.99,6,1,3,156,false
+471,49,Accounting,23,362032.74,4,3,2,24,false
+472,49,Engineering,20,221381.89,3,5,2,75,true
+473,36,Accounting,21,267153.13,6,4,1,102,false
+474,24,Sales,6,179499.46,7,5,4,152,false
+475,29,HR,15,283408.2,8,4,2,58,true
+476,42,HR,20,392302.59,9,3,1,195,true
+477,40,Accounting,10,277089.82,1,3,4,87,true
+478,35,Accounting,19,471156.62,7,3,5,57,false
+479,26,Engineering,2,499236.29,4,1,2,119,false
+480,39,Engineering,14,491277.39,9,1,2,95,false
+481,50,Engineering,11,266193.88,3,5,3,70,false
+482,36,Engineering,23,40104.45,2,4,2,7,false
+483,41,Engineering,12,374347.42,7,3,4,107,true
+484,46,Sales,21,307614.81,6,4,5,175,false
+485,44,Customer Service,29,262926.88,7,5,1,65,true
+486,30,Customer Service,14,37217.03,6,2,4,172,false
+487,50,Sales,7,423995.07,6,3,4,112,true
+488,27,Customer Service,14,371197.15,1,3,1,75,true
+489,23,Engineering,13,103951.25,10,2,5,60,false
+490,38,Engineering,27,223435.92,8,3,5,95,true
+491,33,Customer Service,11,299596.7,9,3,2,60,true
+492,43,Accounting,23,367220.26,2,2,4,162,true
+493,24,Sales,18,45185.1,2,4,1,63,true
+494,38,Accounting,16,480624.91,2,5,5,54,false
+495,42,Accounting,22,463436.8,10,5,5,132,false
+496,30,Customer Service,29,175772.73,3,5,4,24,true
+497,29,Engineering,21,411573.9,3,4,2,179,false
+498,22,Accounting,18,235993.01,6,3,4,53,false
+499,32,Engineering,12,133914.63,10,5,2,48,true
+500,41,Engineering,23,265329.67,7,1,2,176,true
+501,43,HR,7,272801.56,7,2,1,106,false
+502,27,Customer Service,14,298308.99,10,3,1,44,false
+503,32,Accounting,5,179884.58,3,3,4,152,false
+504,37,Engineering,2,90448.86,10,3,4,133,true
+505,47,Sales,10,437991.41,6,1,2,89,false
+506,31,Accounting,12,421759.22,4,4,5,1,true
+507,28,Sales,20,31802.54,9,2,1,139,false
+508,40,Customer Service,14,248121.74,3,1,4,84,false
+509,43,Engineering,18,176435.26,5,4,1,122,false
+510,47,Customer Service,6,117198.07,9,1,4,39,true
+511,24,Accounting,4,312218.37,6,4,4,5,false
+512,31,Accounting,14,134537.94,4,4,2,100,false
+513,41,HR,6,220669.4,7,1,1,54,true
+514,33,HR,26,485094.37,4,4,1,132,true
+515,36,Sales,10,251093.06,9,3,3,0,true
+516,46,Engineering,22,203830.13,9,4,5,24,true
+517,37,Sales,20,161799.14,10,3,1,8,false
+518,30,Sales,19,230569.4,10,3,3,96,false
+519,40,Accounting,13,279597.58,6,2,4,126,true
+520,22,Engineering,29,456813.94,1,5,3,15,true
+521,23,Accounting,27,66671.04,8,4,5,13,true
+522,34,Engineering,2,50434.64,10,2,5,8,false
+523,34,Engineering,12,468164.68,2,5,1,146,true
+524,32,Customer Service,24,470806.71,8,2,5,90,true
+525,31,Customer Service,17,73644.99,10,4,5,164,true
+526,32,Customer Service,14,179188.99,9,4,4,71,false
+527,39,Engineering,20,482017.74,5,1,1,77,true
+528,32,HR,12,42511.65,2,5,5,93,true
+529,38,Engineering,7,375481.37,10,3,5,43,true
+530,21,HR,23,378151.69,5,1,4,78,true
+531,48,Engineering,8,486526.66,3,4,3,110,true
+532,42,Accounting,11,157089.84,2,4,4,143,false
+533,49,Engineering,16,274393.67,8,1,3,160,true
+534,25,Accounting,3,456488.91,5,4,4,68,false
+535,41,Engineering,19,310510.06,9,1,4,183,true
+536,29,Accounting,9,102435.53,6,5,2,162,false
+537,43,Sales,23,425574.57,7,4,2,140,true
+538,28,Engineering,8,281376.82,3,3,4,78,true
+539,33,Accounting,11,137152.05,3,4,3,97,true
+540,47,Engineering,17,282840.95,1,5,4,116,false
+541,38,Customer Service,20,437338.89,2,2,4,25,true
+542,28,Accounting,21,385784.7,3,5,5,144,true
+543,36,Customer Service,10,401392.21,6,3,1,90,false
+544,46,Customer Service,4,72305.32,4,5,3,34,false
+545,32,Sales,25,99140.45,2,4,4,169,false
+546,40,Accounting,25,237079.48,7,2,3,32,true
+547,33,Accounting,15,415985.42,6,5,1,177,true
+548,49,Accounting,23,217317.84,8,2,2,147,false
+549,32,HR,14,185935.3,4,3,4,153,false
+550,27,Customer Service,12,296434.12,1,1,1,176,true
+551,36,Accounting,2,476411.79,3,2,4,87,false
+552,36,Engineering,24,399409.04,1,5,3,82,false
+553,36,Engineering,9,234312.72,7,1,3,85,false
+554,30,Engineering,5,378124.71,4,3,5,155,true
+555,46,Engineering,12,270167.13,9,5,4,114,false
+556,26,Customer Service,18,80320.23,9,1,5,162,false
+557,41,HR,29,155338.77,4,1,2,116,false
+558,37,Customer Service,9,282732.72,9,2,1,83,false
+559,22,Customer Service,25,423617.83,7,3,2,182,false
+560,29,Engineering,13,198883.21,10,5,4,10,true
+561,40,Customer Service,18,457423.0,2,1,1,8,true
+562,48,Accounting,16,186626.98,8,5,1,135,true
+563,30,HR,22,314632.1,7,1,2,186,false
+564,31,HR,27,227727.43,1,5,5,37,true
+565,26,Accounting,9,190060.95,6,2,4,119,false
+566,45,HR,29,201856.16,8,5,1,76,false
+567,34,Accounting,8,306153.02,6,1,4,67,false
+568,24,Engineering,2,244835.32,7,3,4,81,false
+569,28,Accounting,19,107107.57,10,5,5,20,true
+570,28,Customer Service,27,423937.87,7,3,4,104,true
+571,50,HR,22,226730.77,2,5,4,119,false
+572,39,Engineering,6,392039.35,8,1,2,3,true
+573,36,Engineering,18,444510.27,9,2,4,161,true
+574,43,Engineering,26,216612.35,6,2,2,37,false
+575,50,Accounting,19,458588.69,7,3,4,6,false
+576,34,Engineering,8,279922.23,5,3,5,27,true
+577,31,Engineering,16,346247.26,2,4,3,35,false
+578,26,Engineering,15,157569.21,2,5,3,35,false
+579,22,Accounting,3,141269.01,2,1,1,52,false
+580,45,Engineering,7,316937.37,9,5,2,83,true
+581,30,Engineering,7,267342.03,8,4,4,27,true
+582,45,HR,28,492966.91,9,4,5,11,false
+583,45,Sales,28,239469.33,1,2,2,146,true
+584,29,HR,27,273514.45,9,4,4,17,false
+585,32,Accounting,27,123032.69,4,5,2,87,false
+586,46,Accounting,21,55377.25,3,1,5,85,false
+587,43,Engineering,26,340414.58,10,4,4,108,true
+588,50,Sales,8,421252.11,7,4,2,112,true
+589,40,Engineering,2,136214.74,10,5,2,91,true
+590,26,Engineering,25,394795.43,5,1,4,3,false
+591,30,Accounting,4,189732.7,10,3,1,149,false
+592,46,Engineering,28,275033.63,3,5,4,79,true
+593,33,Engineering,15,450993.33,3,4,5,25,true
+594,50,Customer Service,23,178220.73,10,4,1,9,true
+595,24,Engineering,16,69537.95,6,3,5,15,true
+596,44,Engineering,13,93527.9,3,5,3,49,true
+597,36,HR,11,284353.1,8,1,2,11,true
+598,48,Accounting,3,364871.34,7,3,3,30,true
+599,48,Engineering,20,280516.21,2,1,4,43,false
+600,31,Accounting,6,448715.87,10,4,5,39,false
+601,44,Engineering,5,339652.74,4,3,2,71,false
+602,46,Engineering,16,111600.21,9,3,2,6,true
+603,50,Sales,18,54835.27,4,2,1,41,true
+604,48,Engineering,18,154569.54,10,1,3,76,false
+605,36,Engineering,2,41647.33,9,4,3,90,false
+606,29,HR,10,394261.08,6,3,5,71,true
+607,32,Customer Service,4,204569.41,10,4,3,174,false
+608,49,HR,18,340239.95,8,4,3,172,false
+609,33,Engineering,14,492567.62,2,2,2,142,true
+610,44,Customer Service,10,436018.2,3,4,4,77,true
+611,29,Customer Service,4,483285.25,4,4,2,54,false
+612,41,Engineering,6,142033.54,10,3,1,93,true
+613,29,Engineering,18,401573.63,4,5,4,31,false
+614,49,HR,7,242240.39,5,1,1,178,true
+615,26,Customer Service,28,360021.81,8,5,1,32,false
+616,24,Engineering,3,138256.92,1,2,4,166,true
+617,38,Sales,17,285475.9,3,4,4,95,false
+618,41,Accounting,14,131017.73,8,2,4,65,true
+619,33,Accounting,13,105476.41,3,2,3,80,true
+620,44,Customer Service,9,186752.23,3,3,3,151,false
+621,43,Sales,3,411797.99,7,5,2,198,false
+622,26,Customer Service,25,298845.61,3,4,1,146,true
+623,43,Customer Service,10,119287.28,7,4,3,141,true
+624,30,Engineering,26,35151.29,3,5,2,88,true
+625,23,Accounting,5,384188.04,4,3,5,53,true
+626,21,Engineering,9,421354.61,8,5,2,101,true
+627,43,Accounting,22,126603.24,1,1,4,67,true
+628,31,Customer Service,21,232130.94,1,5,2,59,true
+629,23,Accounting,17,297251.53,10,3,2,24,true
+630,42,Engineering,10,80620.38,7,5,2,108,false
+631,25,Engineering,25,498805.32,7,4,4,21,false
+632,35,Customer Service,23,53859.86,5,2,1,180,true
+633,27,Accounting,12,42942.47,1,3,1,191,false
+634,26,HR,14,197073.57,1,2,1,18,false
+635,47,Sales,24,255920.76,8,2,3,110,false
+636,32,Engineering,7,208388.69,3,3,3,111,true
+637,31,Accounting,25,307200.34,2,5,1,131,false
+638,32,Accounting,19,370682.66,6,5,1,130,true
+639,30,HR,12,244576.19,10,1,5,96,true
+640,43,Accounting,24,360887.1,8,3,5,109,false
+641,46,HR,3,66184.31,7,4,5,120,false
+642,43,Sales,7,191028.89,1,1,2,131,true
+643,24,Engineering,8,185628.13,7,4,2,135,false
+644,21,Sales,9,342405.25,9,4,1,27,true
+645,49,Engineering,9,181788.84,5,2,3,193,false
+646,36,Engineering,8,251048.87,7,4,2,12,false
+647,49,Engineering,2,149475.87,8,1,5,196,false
+648,33,Accounting,11,63521.6,8,3,4,94,false
+649,45,Accounting,27,409022.12,9,2,1,195,true
+650,28,HR,8,30056.73,2,4,5,99,false
+651,44,Accounting,14,202244.46,4,4,1,143,false
+652,36,Accounting,19,332886.93,5,2,2,62,true
+653,38,Accounting,4,179633.07,2,2,5,179,true
+654,24,Engineering,2,292181.29,9,4,4,15,false
+655,35,Engineering,9,379966.02,4,4,3,43,true
+656,30,Engineering,13,255065.54,3,4,4,90,true
+657,46,HR,14,129991.27,8,4,3,95,false
+658,48,Engineering,5,390430.67,9,4,1,167,true
+659,28,Customer Service,11,328931.46,6,1,4,100,false
+660,35,Customer Service,23,280078.95,3,1,4,95,true
+661,34,Customer Service,14,152357.1,1,3,2,52,true
+662,26,Accounting,16,391863.91,5,5,2,158,true
+663,46,Sales,15,458676.22,8,1,3,10,false
+664,35,Customer Service,20,453713.96,3,5,1,39,false
+665,42,Sales,15,133683.83,9,2,2,170,true
+666,37,Accounting,10,485371.43,4,4,2,32,true
+667,28,Accounting,14,284617.96,8,2,2,25,true
+668,24,Sales,13,143131.81,9,1,1,164,true
+669,27,Customer Service,28,266615.33,10,1,5,94,false
+670,21,Accounting,10,376637.42,7,3,1,126,false
+671,49,Engineering,19,394285.65,10,3,5,115,false
+672,40,Sales,29,74885.7,4,2,5,18,false
+673,49,Engineering,7,355747.17,5,4,4,120,true
+674,35,Engineering,26,83815.91,9,3,4,135,false
+675,45,Engineering,16,98510.08,1,2,3,181,false
+676,43,Sales,22,280237.88,9,2,4,82,false
+677,50,Accounting,19,394674.96,1,1,3,52,true
+678,36,Engineering,25,386768.97,3,5,5,58,false
+679,48,Accounting,10,371143.33,7,5,4,141,false
+680,42,HR,10,470260.18,1,5,3,50,true
+681,43,Engineering,3,182250.8,3,1,4,135,false
+682,31,Sales,19,104041.6,2,3,2,171,true
+683,50,HR,25,181708.92,5,4,5,156,true
+684,29,Accounting,18,368843.6,3,5,4,46,true
+685,48,Sales,15,475870.93,3,2,3,176,false
+686,34,HR,5,305683.79,4,2,4,5,true
+687,48,Accounting,10,329442.3,9,4,4,188,false
+688,48,Accounting,6,55531.48,7,3,1,61,true
+689,23,Customer Service,12,452031.01,5,3,5,133,false
+690,27,Sales,19,481743.85,1,2,3,185,false
+691,22,Engineering,20,409543.53,5,4,5,166,true
+692,31,Engineering,24,190770.73,9,5,4,118,false
+693,30,Accounting,23,377035.13,1,1,3,154,false
+694,38,Customer Service,17,318527.95,3,5,4,144,true
+695,42,Engineering,13,71919.34,3,2,3,178,true
+696,43,Customer Service,21,496269.78,6,5,2,183,true
+697,43,Accounting,20,390944.55,5,2,5,40,true
+698,37,Accounting,6,202866.42,8,1,3,88,false
+699,44,Engineering,2,495380.99,6,4,1,114,true
+700,21,Customer Service,24,427274.91,2,3,1,98,false
+701,31,Engineering,27,57291.41,10,1,2,143,false
+702,47,Accounting,23,231592.33,8,1,3,183,true
+703,34,Engineering,14,342762.72,2,4,2,20,true
+704,44,Customer Service,15,473859.17,3,2,1,65,false
+705,46,Accounting,15,489252.76,2,1,4,102,true
+706,44,HR,5,71411.34,10,5,3,65,true
+707,40,Accounting,9,372105.54,10,4,5,60,false
+708,21,Sales,27,416633.39,2,3,2,5,false
+709,43,Accounting,24,77916.5,7,1,3,58,true
+710,49,Engineering,19,322477.74,4,4,4,96,false
+711,38,Sales,28,114351.53,5,5,3,14,true
+712,46,Engineering,12,274957.44,10,1,2,62,false
+713,33,Customer Service,17,306991.97,7,5,3,93,false
+714,24,Accounting,7,476271.07,4,4,3,147,false
+715,34,Accounting,17,257450.07,3,1,2,189,true
+716,21,Engineering,4,383733.62,1,3,5,51,false
+717,48,Accounting,23,306546.83,3,5,5,27,false
+718,23,Engineering,24,183109.48,5,1,1,52,true
+719,48,Accounting,14,277367.53,4,1,4,120,true
+720,33,HR,20,113859.06,4,5,4,158,true
+721,49,Customer Service,27,279352.27,5,4,5,60,false
+722,22,Engineering,18,118014.78,5,1,4,37,true
+723,39,Engineering,5,205024.53,4,4,3,45,true
+724,43,HR,4,359389.8,6,4,5,154,false
+725,26,Engineering,18,195107.18,6,5,4,6,false
+726,25,Accounting,3,137812.7,8,5,2,4,true
+727,23,Sales,24,338866.75,6,2,1,78,true
+728,44,Customer Service,21,473101.47,3,1,3,146,false
+729,31,Engineering,8,347435.98,3,3,2,195,true
+730,37,Engineering,26,442351.98,3,4,1,79,false
+731,24,Engineering,4,332543.99,9,1,3,89,false
+732,27,Customer Service,4,471407.07,4,1,4,127,true
+733,48,Accounting,17,499598.05,9,5,5,43,false
+734,44,Accounting,7,453081.58,3,3,4,171,true
+735,36,Engineering,20,467034.19,9,5,3,8,true
+736,24,Customer Service,20,242110.08,10,5,1,17,true
+737,45,Accounting,20,275446.43,2,5,3,173,true
+738,33,Engineering,6,380306.8,9,3,2,61,false
+739,30,Engineering,29,456202.35,5,2,5,127,false
+740,37,Accounting,23,38670.94,7,1,2,66,false
+741,49,Customer Service,6,31078.6,3,3,4,114,true
+742,24,Sales,25,345967.4,9,4,4,96,false
+743,40,Engineering,27,130925.48,7,5,4,182,false
+744,36,Accounting,18,199905.41,6,3,5,58,false
+745,32,HR,15,348600.27,7,2,4,35,true
+746,31,Accounting,20,328548.11,10,4,3,194,true
+747,43,Sales,14,358507.31,4,4,3,11,false
+748,35,Engineering,20,87047.61,7,1,2,181,true
+749,40,Engineering,15,319181.4,10,2,2,74,true
+750,48,Engineering,18,191028.03,8,2,1,191,true
+751,40,Engineering,27,103520.27,2,3,2,199,false
+752,27,Accounting,28,238196.31,2,3,4,94,true
+753,21,Engineering,3,482717.79,6,5,4,86,true
+754,24,Engineering,16,468931.71,4,3,3,77,true
+755,49,Sales,17,273402.83,8,1,3,99,false
+756,46,Engineering,18,339361.31,5,2,3,96,false
+757,41,Sales,11,198422.41,1,5,2,87,true
+758,26,Engineering,6,426193.29,10,5,3,13,false
+759,26,Engineering,4,445577.02,5,1,4,180,true
+760,27,Engineering,9,418830.5,9,5,1,10,false
+761,46,Customer Service,2,453642.68,2,4,1,24,false
+762,33,HR,4,103645.15,3,2,1,152,false
+763,30,Sales,14,220428.09,8,1,3,129,false
+764,22,Customer Service,12,484535.43,7,1,3,59,false
+765,26,Accounting,20,316424.29,2,2,4,5,false
+766,29,HR,18,38572.52,8,4,3,155,true
+767,48,Sales,17,149450.22,7,1,1,168,true
+768,44,Engineering,23,428669.41,9,1,2,167,true
+769,37,Customer Service,24,358155.24,2,2,1,187,false
+770,30,Customer Service,20,47554.16,10,3,4,197,true
+771,21,Engineering,11,154472.78,2,5,4,72,true
+772,45,Engineering,9,229161.88,3,1,1,2,true
+773,39,Accounting,8,386145.34,8,3,4,139,true
+774,32,Engineering,16,318003.82,5,2,2,182,false
+775,47,Customer Service,4,428693.83,5,3,2,176,false
+776,49,Customer Service,6,352890.32,9,2,1,131,true
+777,30,Engineering,2,385957.73,10,5,2,9,true
+778,32,Accounting,27,485981.22,4,3,5,0,true
+779,26,Engineering,8,232159.18,2,5,5,86,false
+780,26,Customer Service,21,202937.72,4,1,2,11,true
+781,50,Accounting,2,495584.97,8,2,2,67,true
+782,49,Accounting,19,374599.32,1,4,4,63,false
+783,22,Sales,7,172740.23,2,2,5,99,true
+784,48,Engineering,18,113266.73,10,2,4,98,false
+785,34,Customer Service,10,421957.51,8,1,5,55,true
+786,38,HR,5,366207.58,9,1,1,70,false
+787,30,Customer Service,4,259258.89,8,1,2,174,false
+788,29,Accounting,23,498552.48,8,1,1,29,false
+789,40,HR,28,460904.36,5,2,3,166,false
+790,24,Engineering,23,364801.19,8,4,5,55,false
+791,37,Customer Service,17,468183.33,5,5,1,88,false
+792,39,Engineering,15,433446.47,9,2,1,31,true
+793,43,Accounting,7,377043.0,4,2,4,188,true
+794,48,HR,27,316104.99,6,1,4,160,false
+795,47,Customer Service,4,402063.45,1,4,4,100,false
+796,46,Engineering,20,275451.67,10,5,2,192,false
+797,35,Accounting,27,298412.59,10,4,5,115,false
+798,38,Engineering,26,468936.79,4,3,5,191,false
+799,38,HR,18,291562.64,6,2,5,161,true
+800,25,Sales,29,160015.51,3,3,5,72,false
+801,46,Accounting,20,319580.76,2,5,4,7,true
+802,23,Sales,26,382003.07,8,3,1,86,true
+803,23,Accounting,21,297321.02,5,1,3,168,true
+804,31,Engineering,3,200538.28,9,4,2,79,true
+805,43,Accounting,28,275251.98,10,1,3,122,true
+806,27,Engineering,12,475822.68,2,4,2,58,false
+807,27,Accounting,13,188442.83,5,1,4,104,false
+808,42,Customer Service,17,482643.99,1,2,1,77,false
+809,24,Engineering,4,54345.27,3,5,4,104,false
+810,43,Accounting,24,167826.47,10,5,4,80,false
+811,25,Engineering,25,260478.53,1,2,1,127,true
+812,23,Engineering,27,465465.08,9,1,3,130,false
+813,36,Accounting,26,288833.43,7,5,5,124,true
+814,47,Accounting,16,361485.94,9,2,3,179,false
+815,41,Engineering,17,333265.57,4,2,2,11,false
+816,45,Engineering,25,101612.75,2,5,5,7,true
+817,45,Engineering,10,290933.87,1,4,1,144,true
+818,43,Accounting,16,303326.74,6,2,1,31,false
+819,33,HR,18,235806.24,8,2,1,93,true
+820,22,Sales,13,252670.75,5,5,3,43,false
+821,21,Engineering,24,447811.26,8,1,2,149,false
+822,50,HR,24,475050.96,8,3,4,107,false
+823,24,Customer Service,11,162106.3,7,4,5,78,true
+824,37,Accounting,25,67435.13,4,2,3,192,false
+825,44,Engineering,3,344223.24,9,5,5,42,false
+826,32,HR,17,309789.89,9,3,5,54,false
+827,30,Accounting,28,216954.11,5,3,4,99,true
+828,47,Engineering,22,105611.31,10,2,3,188,true
+829,39,Engineering,29,249962.4,3,4,4,187,false
+830,49,HR,21,304437.02,9,5,5,101,false
+831,45,HR,7,49197.67,9,5,2,182,false
+832,30,Accounting,20,289309.39,6,3,4,168,true
+833,40,Engineering,18,380820.16,10,3,5,144,true
+834,25,Customer Service,4,71782.13,1,1,2,95,false
+835,33,Engineering,17,71016.59,8,3,4,148,true
+836,35,Customer Service,27,283192.44,4,3,5,120,false
+837,36,Engineering,21,195370.82,3,1,1,21,true
+838,35,Sales,10,405232.31,10,3,4,26,true
+839,40,HR,11,281775.87,7,2,2,9,false
+840,27,Customer Service,12,263468.42,9,5,3,121,true
+841,35,HR,9,433325.42,5,3,3,28,true
+842,23,Customer Service,20,305302.15,5,5,2,57,false
+843,22,HR,12,365637.3,6,4,4,174,true
+844,42,Engineering,6,244709.08,1,3,4,159,true
+845,37,Engineering,27,213886.11,3,4,1,126,false
+846,49,Accounting,4,451812.63,1,5,5,40,true
+847,45,Customer Service,21,348361.82,1,5,5,142,false
+848,22,Customer Service,15,105565.65,3,2,4,66,true
+849,46,Accounting,3,70038.13,5,1,2,141,false
+850,28,HR,6,475209.64,8,5,3,10,true
+851,35,Sales,6,206113.59,8,3,3,17,true
+852,24,Sales,12,335880.89,4,1,3,194,false
+853,49,Sales,12,157674.7,7,3,1,12,true
+854,48,Engineering,14,326273.01,1,5,1,20,true
+855,50,Customer Service,5,57728.61,4,5,1,113,true
+856,43,Engineering,22,155183.5,5,5,5,145,false
+857,49,Accounting,13,151934.93,2,4,2,7,true
+858,48,Accounting,10,359785.82,4,1,2,190,false
+859,31,Engineering,22,448870.83,10,5,5,15,true
+860,49,Sales,10,340239.7,4,1,1,183,false
+861,28,Customer Service,10,316348.27,10,3,1,88,true
+862,42,HR,4,215069.01,1,4,2,165,true
+863,39,Accounting,17,497472.15,8,5,5,106,false
+864,46,Sales,10,264074.3,5,3,5,164,false
+865,50,Sales,17,350277.96,3,4,5,10,true
+866,35,Accounting,5,459727.26,10,5,3,112,true
+867,44,Customer Service,20,154738.24,3,1,1,116,false
+868,25,Accounting,19,51984.04,5,4,1,27,true
+869,23,Engineering,4,132237.33,9,2,5,95,true
+870,41,Accounting,26,399604.08,9,1,1,114,true
+871,43,Engineering,17,202802.74,3,2,2,38,false
+872,44,Customer Service,27,192844.42,9,3,3,162,false
+873,43,Engineering,7,445263.55,10,5,4,94,true
+874,23,Sales,10,282731.66,4,3,5,78,true
+875,44,Engineering,29,347721.87,1,5,3,24,true
+876,27,Engineering,26,439570.88,5,4,2,47,false
+877,41,Engineering,16,411471.54,8,3,1,199,false
+878,41,Accounting,3,176747.24,10,1,4,125,false
+879,22,Engineering,23,355494.81,4,1,3,183,false
+880,46,Engineering,8,396100.72,10,4,1,162,true
+881,33,HR,13,295458.96,9,1,1,94,false
+882,33,Engineering,29,230976.53,1,2,5,180,true
+883,24,Engineering,12,445388.43,7,4,2,43,true
+884,49,Accounting,8,104783.92,6,2,1,146,true
+885,30,Engineering,25,137542.39,3,4,5,109,true
+886,26,Sales,21,238529.11,10,1,5,185,false
+887,35,Accounting,19,415973.7,5,2,1,47,false
+888,27,Accounting,22,37365.86,1,4,5,148,true
+889,40,Customer Service,4,184910.88,10,3,2,43,false
+890,30,Engineering,22,123387.81,10,4,2,165,true
+891,22,Engineering,24,57673.8,8,3,3,179,false
+892,45,Accounting,22,370006.24,9,3,3,89,false
+893,43,Engineering,25,313045.65,5,5,3,145,false
+894,25,Accounting,2,250646.62,9,1,3,60,true
+895,24,Sales,13,228347.59,3,4,3,196,false
+896,48,HR,7,227311.69,7,4,2,42,false
+897,49,Accounting,24,364153.73,10,5,5,33,true
+898,45,Accounting,17,472327.75,10,5,1,81,false
+899,50,Sales,27,262055.5,7,5,3,101,true
+900,30,Customer Service,9,75137.31,10,1,2,83,true
+901,49,Engineering,14,32568.69,8,3,4,119,true
+902,47,HR,15,75810.84,1,3,1,64,false
+903,48,Engineering,7,264534.94,6,4,5,5,false
+904,29,Sales,7,291681.87,4,3,1,73,true
+905,37,Engineering,15,244565.24,8,4,2,154,false
+906,46,HR,10,349918.81,1,5,1,185,false
+907,21,Sales,15,123086.46,4,2,3,122,true
+908,38,Engineering,20,398637.71,5,2,5,171,true
+909,22,Engineering,10,92781.02,1,1,4,38,true
+910,50,Engineering,25,30916.23,1,1,3,194,true
+911,32,Engineering,8,264381.29,4,5,5,125,true
+912,26,Engineering,13,191197.99,10,5,2,28,false
+913,28,Accounting,4,152699.26,1,2,3,81,false
+914,43,HR,17,58902.25,2,5,4,58,true
+915,27,Engineering,23,153542.09,8,2,4,72,true
+916,34,Accounting,12,97550.8,9,5,4,173,true
+917,49,Engineering,16,485749.59,3,3,1,72,true
+918,30,Customer Service,19,144209.9,4,4,2,192,false
+919,26,Engineering,14,131744.48,9,1,3,152,false
+920,46,Engineering,15,160411.67,3,3,1,15,true
+921,47,Customer Service,9,209773.82,2,3,5,175,false
+922,48,Engineering,16,103421.9,3,5,5,111,true
+923,35,Engineering,10,278944.3,3,1,4,79,true
+924,29,Engineering,22,252451.21,6,4,4,68,true
+925,23,HR,2,433396.22,1,2,2,152,false
+926,40,Engineering,15,55347.33,6,2,4,89,true
+927,30,Accounting,12,492842.49,3,4,5,67,true
+928,46,Engineering,6,190530.96,9,2,4,37,false
+929,43,Accounting,12,383059.02,2,1,5,18,false
+930,40,Customer Service,28,321031.04,10,5,1,199,false
+931,43,HR,19,367268.76,1,5,2,31,false
+932,50,Sales,19,258509.73,8,4,4,78,false
+933,48,HR,18,72629.84,4,3,3,151,false
+934,50,Accounting,21,63520.17,2,2,1,143,false
+935,30,Customer Service,4,296905.03,3,4,2,31,true
+936,33,HR,19,258185.64,6,1,5,120,false
+937,21,Engineering,18,93994.79,1,2,5,126,true
+938,36,Engineering,22,309183.61,2,2,5,33,true
+939,31,Engineering,11,84711.5,7,3,4,193,false
+940,36,HR,23,382924.54,5,5,2,56,false
+941,36,Engineering,17,335048.74,6,2,5,113,false
+942,33,Sales,27,251071.52,7,3,2,125,true
+943,21,HR,7,311499.68,3,5,4,52,false
+944,25,Accounting,11,488783.84,8,2,2,128,false
+945,29,Engineering,9,345193.51,8,3,1,199,true
+946,42,Accounting,28,278341.41,9,2,5,190,false
+947,48,Sales,8,213737.32,10,5,5,173,false
+948,28,Engineering,14,320076.43,5,1,5,58,true
+949,33,Sales,19,289049.72,8,5,5,18,false
+950,27,Engineering,12,280449.06,3,4,4,38,true
+951,50,Engineering,23,33857.07,5,4,1,159,true
+952,32,Sales,20,258005.35,6,5,2,162,true
+953,46,Accounting,18,312381.22,5,1,1,16,false
+954,42,Accounting,24,163536.03,6,4,5,10,false
+955,26,Accounting,17,318642.61,6,4,1,84,true
+956,26,Accounting,14,215639.86,2,5,4,63,true
+957,49,Customer Service,13,394254.51,10,1,2,186,false
+958,50,Customer Service,14,62779.98,7,3,5,87,false
+959,50,Engineering,26,303044.9,2,3,3,159,true
+960,26,Accounting,18,118676.93,5,4,4,15,true
+961,45,Accounting,25,170552.83,2,4,2,90,true
+962,31,Sales,14,142467.41,10,2,2,66,false
+963,33,Customer Service,10,394315.1,9,3,5,12,false
+964,39,Accounting,4,251702.8,6,5,4,18,true
+965,41,Engineering,27,135518.87,9,2,5,150,true
+966,41,Engineering,23,304397.29,1,1,4,96,true
+967,39,Accounting,26,134587.92,10,3,1,150,false
+968,26,Accounting,13,380568.78,2,5,2,158,false
+969,30,Accounting,13,266763.42,5,5,1,77,false
+970,48,Customer Service,18,176931.42,6,2,2,56,false
+971,31,Customer Service,20,250464.9,10,1,1,161,true
+972,45,Engineering,6,215264.16,5,5,1,71,true
+973,27,Engineering,26,175317.11,6,2,1,188,true
+974,30,Sales,16,396743.75,8,2,4,81,true
+975,40,Engineering,11,37293.56,3,5,2,138,false
+976,28,Engineering,21,52711.55,1,2,2,168,true
+977,50,Engineering,29,201699.56,9,3,1,171,false
+978,38,HR,23,380407.3,2,2,3,118,false
+979,45,HR,13,187670.09,3,1,5,103,false
+980,44,Engineering,17,359697.41,4,3,3,196,false
+981,33,Engineering,29,59202.8,9,5,1,117,true
+982,30,Engineering,20,366871.98,1,2,1,176,true
+983,40,Accounting,3,300239.88,2,2,1,37,false
+984,31,Accounting,19,169250.95,7,2,1,146,false
+985,31,Engineering,24,123714.51,10,5,1,102,true
+986,37,Accounting,8,61368.68,3,1,1,87,false
+987,38,HR,9,138467.6,6,4,1,165,false
+988,21,HR,17,447473.07,6,5,2,109,true
+989,40,HR,15,32380.93,10,5,4,146,true
+990,36,HR,23,232507.95,10,2,3,77,false
+991,44,HR,20,427390.7,6,1,3,46,true
+992,50,Accounting,24,275906.2,3,5,1,133,true
+993,22,Engineering,13,422022.6,4,2,4,178,true
+994,31,Accounting,20,222324.2,4,3,4,81,true
+995,38,Customer Service,7,298427.26,6,3,5,174,true
+996,44,Engineering,24,458978.48,2,3,4,27,true
+997,44,Engineering,13,320396.29,1,1,1,149,false
+998,43,Engineering,22,308605.56,10,5,3,58,false
+999,28,Accounting,5,343753.16,7,3,4,186,true
+1000,46,Customer Service,3,465642.35,7,2,1,178,false
