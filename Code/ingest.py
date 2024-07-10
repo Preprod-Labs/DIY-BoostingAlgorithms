@@ -1,31 +1,55 @@
-# To split and ingest mock data into MariaDB and Elasticsearch
+# META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-import pandas as pd # For data manipulation
+    # Developer details: 
+        # Name: Mohini T and Vansh R
+        # Role: Architects
+        # Code ownership rights: Mohini T and Vansh R
+    # Version:
+        # Version: V 1.0 (11 July 2024)
+            # Developers: Mohini T and Vansh R
+            # Unit test: Pass
+            # Integration test: Pass
+     
+    # Description: This code snippet is used to ingest data from MariaDB, MongoDB, and Redis.
+        # MariaDB: Yes
+        # MongoDB: Yes
+
+# CODE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    # Dependency: 
+        # Environment:     
+            # Python 3.11.5
+            # Pandas 2.2.2
+
+import pandas as pd # For data manipulation and analysis
 
 # Importing the necessary .py helper files and functions
-from data_utils import (
+from db_utils import (
     connect_mariadb,
-    connect_elasticsearch,
-    store_to_mariadb, store_to_elasticsearch,
+    connect_mongodb,
+    store_to_mariadb, 
+    store_to_mongodb,
     create_mariadb_database,
     create_mariadb_table,
-    create_es_index
+    create_mongodb_collection
 )
 
-def ingest_data(csv_path, mariadb_config, es_config):
+def ingest_data(csv_path, mariadb_config, mongodb_config):
+    # Load the data from the CSV file
     data = pd.read_csv(csv_path)
     
-    # Separate data for MariaDB and Elasticsearch
+    # Separate data for MariaDB and MongoDB
     mariadb_data = data[['employee_id', 'age', 'years_at_company', 'monthly_income', 
                          'job_satisfaction', 'performance_rating', 'work_life_balance', 
                          'training_hours_last_year', 'attrition']]
     
-    es_data = data[['employee_id', 'department']]
+    mongodb_data = data[['employee_id', 'department']]
     
     # Connect to MariaDB and create database and table if they don't exist
     mariadb_conn = connect_mariadb(mariadb_config['host'], mariadb_config['user'], mariadb_config['password'])
     create_mariadb_database(mariadb_conn, mariadb_config['database'])
     
+    # Connect to MariaDB and create table if it doesn't exist
     mariadb_conn = connect_mariadb(mariadb_config['host'], mariadb_config['user'], mariadb_config['password'], mariadb_config['database'])
     table_schema = """
         employee_id INT PRIMARY KEY,
@@ -41,31 +65,23 @@ def ingest_data(csv_path, mariadb_config, es_config):
     create_mariadb_table(mariadb_conn, 'employees', table_schema)
     store_to_mariadb(mariadb_conn, 'employees', mariadb_data)
     
-    # Store data in Elasticsearch
-    es = connect_elasticsearch(es_config['host'], es_config['port'], es_config['user'], es_config['password'])
-    index_schema = {
-        "mappings": {
-            "properties": {
-                "employee_id": {"type": "integer"},
-                "department": {"type": "text"}
-            }
-        }
-    }
-    create_es_index(es, 'employees', index_schema)
-    store_to_elasticsearch(es, 'employees', es_data)
+    # Connect to MongoDB and create collection if it doesn't exist
+    mongodb_db = connect_mongodb(mongodb_config['host'], mongodb_config['port'], mongodb_config['database'])
+    mongodb_collection = create_mongodb_collection(mongodb_db, 'employees')
+    store_to_mongodb(mongodb_collection, mongodb_data)
     
 if __name__ == "__main__":
+    # Configuration for MariaDB and MongoDB
     mariadb_config = {
         'host': 'localhost',
         'user': 'root',
         'password': 'password',
         'database': 'preprod'
     }
-    es_config = {
+    mongodb_config = {
         'host': 'localhost',
-        'port': 9200,
-        'user': 'elastic',      # Add your own Elasticsearch username
-        'password': 'password'  # Add your own Elasticsearch password
+        'port': 27017,
+        'database': 'preprod'
     }
     csv_path = 'Data/Master/mock_data.csv'
-    ingest_data(csv_path, mariadb_config, es_config)
+    ingest_data(csv_path, mariadb_config, mongodb_config)

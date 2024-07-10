@@ -1,101 +1,137 @@
-# Note: This code contains lots of measures to check where the the data went wrong
+# META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# To transform and merge data from MariaDB and Elasticsearch to Redis
+    # Developer details: 
+        # Name: Mohini T and Vansh R
+        # Role: Architects
+        # Code ownership rights: Mohini T and Vansh R
+    # Version:
+        # Version: V 1.0 (11 July 2024)
+            # Developers: Mohini T and Vansh R
+            # Unit test: Pass
+            # Integration test: Pass
+     
+    # Description: This code snippet is used to transform and merge data from MariaDB and Elasticsearch to Redis.
+        # MariaDB: Yes
+        # MongoDB: Yes
+        # Redis: Yes
 
-import pandas as pd # For data manipulation
-from sklearn.preprocessing import LabelEncoder # For encoding categorical data
+# CODE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    # Dependency: 
+        # Environment:     
+            # Python 3.11.5
+            # Pandas 2.2.2
+            # Scikit-learn 1.5.1
+
+import pandas as pd                             # For data manipulation and analysis
+from sklearn.preprocessing import LabelEncoder  # For encoding categorical features, here, 'department'
 
 # Importing the necessary .py helper files and functions
-from data_utils import (
-    connect_mariadb,
-    connect_elasticsearch,
+from db_utils import (
+    connect_mariadb, 
+    connect_mongodb, 
+    retrieve_from_mariadb, 
+    retrieve_from_mongodb, 
+    store_to_redis, 
+    create_mariadb_database,
+    create_mariadb_table,
+    create_mongodb_collection,
     connect_redis,
-    store_to_redis,
-    retrieve_from_mariadb,
-    retrieve_from_elasticsearch,
-    store_to_elasticsearch
+    create_redis_keyspace
 )
 
-def transform_data(mariadb_data, es_data):
-    # Check for any missing values in the 'department' column
-    if es_data['department'].isnull().any():
-        raise ValueError("Missing values detected in 'department' column of Elasticsearch data.")
-
-    # Encode 'department' feature from Elasticsearch to numerical values using LabelEncoder
+def transform_department_feature(df):
+    # Encode the 'department' feature into numerical values
     le = LabelEncoder()
-    es_data['department'] = le.fit_transform(es_data['department'])
+    df['department'] = le.fit_transform(df['department'])
+    return df
 
-    # Show the department encoding
-    department_mapping = dict(zip(le.classes_, le.transform(le.classes_)))
-    print("Department Encoding Map:")
-    for dept, code in department_mapping.items():
-        print(f"{dept}: {int(code)}")  # Convert np.int64 to int for clarity
+def merge_data(mariadb_df, mongodb_df):
+    # Merge the MariaDB and MongoDB dataframes on 'employee_id'
+    return pd.merge(mariadb_df, mongodb_df, on='employee_id')
 
-    # Normalize 'monthly_income' in MariaDB data
-    mariadb_data['monthly_income'] = (mariadb_data['monthly_income'] - mariadb_data['monthly_income'].mean()) / mariadb_data['monthly_income'].std()
+def split_data(df, train_size=600, test_size=150, validation_size=150, supervalidation_size=100):
+    # Split the data into training, testing, validation, and supervalidation datasets
+    train = df.iloc[:train_size]
+    test = df.iloc[train_size:train_size+test_size]
+    validation = df.iloc[train_size+test_size:train_size+test_size+validation_size]
+    supervalidation = df.iloc[train_size+test_size+validation_size:train_size+test_size+validation_size+supervalidation_size]
+    return train, test, validation, supervalidation
 
-    return mariadb_data, es_data, le
+def store_datasets_to_redis(redis_conn, datasets, dataset_names):
+    # Stores datasets in Redis
+    for dataset, name in zip(datasets, dataset_names):
+        # Drop 'employee_id' before saving
+        dataset = dataset.drop(columns=['employee_id'])
+        # Store dataset as a CSV string in Redis
+        store_to_redis(redis_conn, name, dataset.to_csv(index=False))
+        print(f"Dataset '{name}' saved to Redis.")
 
-def merge_data(mariadb_data, es_data):
-    return pd.merge(mariadb_data, es_data, on='employee_id', how='outer')
-
-def main(mariadb_config, es_config, redis_config):
-    # Connect to MariaDB
+def main(mariadb_config, mongodb_config, redis_config):
+    # Connect to databases
+    mariadb_conn = connect_mariadb(mariadb_config['host'], mariadb_config['user'], mariadb_config['password'])
+    create_mariadb_database(mariadb_conn, mariadb_config['database'])
     mariadb_conn = connect_mariadb(mariadb_config['host'], mariadb_config['user'], mariadb_config['password'], mariadb_config['database'])
+    
+    # Ensure MariaDB table exists
+    table_schema = """
+        employee_id INT PRIMARY KEY,
+        age INT,
+        years_at_company INT,
+        monthly_income FLOAT,
+        job_satisfaction INT,
+        performance_rating INT,
+        work_life_balance INT,
+        training_hours_last_year INT,
+        attrition BOOLEAN
+    """
+    create_mariadb_table(mariadb_conn, 'employees', table_schema)
+    
+    mongodb_db = connect_mongodb(mongodb_config['host'], mongodb_config['port'], mongodb_config['database'])
+    mongodb_collection = create_mongodb_collection(mongodb_db, 'employees')
+    
+    redis_conn = connect_redis(redis_config['host'], redis_config['port'])
+    
+    # Retrieve data from databases
+    mariadb_df = retrieve_from_mariadb(mariadb_conn, 'SELECT * FROM employees')
+    mongodb_df = retrieve_from_mongodb(mongodb_collection, {})
+    
+    # Drop the '_id' column from MongoDB data
+    if '_id' in mongodb_df.columns:
+        mongodb_df.drop(columns=['_id'], inplace=True)
 
-    # Connect to Elasticsearch
-    es = connect_elasticsearch(es_config['host'], es_config['port'], es_config['user'], es_config['password'])
+    # Transform MongoDB data
+    mongodb_df = transform_department_feature(mongodb_df)
+    
+    # Merge data
+    merged_df = merge_data(mariadb_df, mongodb_df)
 
-    # Connect to Redis
-    r = connect_redis(redis_config['host'], redis_config['port'])
-
-    # Retrieve data from MariaDB
-    mariadb_data = retrieve_from_mariadb(mariadb_conn, "SELECT * FROM employees")
-
-    # Retrieve data from Elasticsearch
-    es_query = {"query": {"match_all": {}}}
-    es_response = retrieve_from_elasticsearch(es, 'employees', es_query)
-    es_data = pd.DataFrame([doc['_source'] for doc in es_response['hits']['hits']])
-
-    # Perform data transformation
-    transformed_mariadb_data, transformed_es_data, le = transform_data(mariadb_data, es_data)
-
-    # Store the transformed Elasticsearch data back to Elasticsearch
-    store_to_elasticsearch(es, 'employees', transformed_es_data)
-
-    # Retrieve the data again from Elasticsearch to ensure consistency
-    es_response = retrieve_from_elasticsearch(es, 'employees', es_query)
-    transformed_es_data = pd.DataFrame([doc['_source'] for doc in es_response['hits']['hits']])
-
-    # Merge the transformed data from MariaDB and Elasticsearch
-    merged_data = merge_data(transformed_mariadb_data, transformed_es_data)
-
-    # Check the merged data size
-    print(f"Merged Data Size: {merged_data.shape[0]} rows")
-
-    # Check for any missing values
-    print(f"Missing values in merged data:\n{merged_data.isnull().sum()}")
-
-    # Store the merged data into Redis
-    # Convert DataFrame to JSON string before storing in Redis
-    store_to_redis(r, 'merged_data', merged_data.to_json(orient='records'))  # Ensure correct JSON format
+    # Split data
+    train, test, validation, supervalidation = split_data(merged_df)
+    
+    # Ensure Redis keyspace exists
+    dataset_names = ['train', 'test', 'validation', 'supervalidation']
+    for name in dataset_names:
+        create_redis_keyspace(redis_conn, name)
+    
+    # Store datasets to Redis
+    datasets = [train, test, validation, supervalidation]
+    store_datasets_to_redis(redis_conn, datasets, dataset_names)
 
 if __name__ == "__main__":
-    # Define configurations for MariaDB, Elasticsearch, and Redis
     mariadb_config = {
         'host': 'localhost',
         'user': 'root',
         'password': 'password',
         'database': 'preprod'
     }
-    es_config = {
+    mongodb_config = {
         'host': 'localhost',
-        'port': 9200,
-        'user': 'elastic',      # Add your own Elasticsearch username
-        'password': 'password'  # Add your own Elasticsearch password
+        'port': 27017,
+        'database': 'preprod'
     }
     redis_config = {
         'host': 'localhost',
         'port': 6379
     }
-    main(mariadb_config, es_config, redis_config)
+    main(mariadb_config, mongodb_config, redis_config)
