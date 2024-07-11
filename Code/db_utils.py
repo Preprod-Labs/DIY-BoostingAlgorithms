@@ -29,19 +29,24 @@ import pymongo          # For connecting to MongoDB
 import redis            # For connecting to Redis
 
 def connect_mariadb(host, user, password, database=None): # For connecting to MariaDB
-    if database:
-        return mysql.connector.connect(host=host, user=user, password=password, database=database)
-    else:
-        return mysql.connector.connect(host=host, user=user, password=password)
+    connection = mysql.connector.connect(
+        host=host,
+        user=user,
+        password=password,
+        database=database,
+        charset='utf8mb4',
+        collation='utf8mb4_general_ci'
+    )
+    return connection
 
 def create_mariadb_database(conn, database): # For creating a MariaDB database
     cursor = conn.cursor()
-    cursor.execute(f"CREATE DATABASE IF NOT EXISTS {database}")
+    cursor.execute(f"CREATE DATABASE IF NOT EXISTS {database} CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci")
     conn.commit()
 
 def create_mariadb_table(conn, table_name, table_schema): # For creating a MariaDB table
     cursor = conn.cursor()
-    cursor.execute(f"CREATE TABLE IF NOT EXISTS {table_name} ({table_schema})")
+    cursor.execute(f"CREATE TABLE IF NOT EXISTS {table_name} ({table_schema}) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci")
     conn.commit()
 
 def connect_mongodb(host, port, database, user=None, password=None): # For connecting to MongoDB

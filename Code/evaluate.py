@@ -22,6 +22,7 @@
             # Scikit-learn 1.5.1
             # Pandas 2.2.2
 
+import joblib
 from sklearn.metrics import accuracy_score, classification_report   # For model evaluation
 
 # Importing the necessary .py helper files and functions
@@ -43,18 +44,12 @@ def evaluate_model(model_path, data_key):
     X = data.drop(columns=['attrition'])
     y = data['attrition']
     
-    # Load the model
-    import joblib
     model = joblib.load(model_path)
     
     # Make predictions
     y_pred = model.predict(X)
     
-    # Print accuracy and classification report
-    print(f"Evaluation on {data_key}:")
-    print(f"Accuracy: {accuracy_score(y, y_pred)}")
-    print("Classification Report:")
-    print(classification_report(y, y_pred))
-
-if __name__ == "__main__":
-    pass
+    accuracy = accuracy_score(y, y_pred)
+    classificationReport = classification_report(y, y_pred)
+    
+    return accuracy, classificationReport

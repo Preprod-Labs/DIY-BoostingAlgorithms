@@ -78,9 +78,9 @@ def train_gbm(data):
 
     return best_model
 
-def main():
+def train_model(redis_host, redis_port, model_path):
     # Connect to Redis
-    redis_conn = connect_redis('localhost', 6379)  # Port specified for Redis
+    redis_conn = connect_redis(redis_host, redis_port)  # Port specified for Redis
     
     # Retrieve the training data from Redis
     training_data = retrieve_from_redis(redis_conn, 'train')
@@ -93,10 +93,10 @@ def main():
     model = train_gbm(data)
     
     # Save the trained model to a file
-    joblib.dump(model, 'gbm_model.pkl')
+    joblib.dump(model, model_path)
     
     # Evaluate the model on the training dataset
-    evaluate_model('gbm_model.pkl', 'train')
+    return evaluate_model(model_path, 'train')
 
 if __name__ == "__main__":
-    main()
+    train_model()

@@ -73,9 +73,9 @@ def train_adaboost(data):
 
     return best_model
 
-def main():
+def train_model(redis_host, redis_port, model_path):
     # Connect to Redis
-    redis_conn = connect_redis('localhost', 6379)  # Port specified for Redis
+    redis_conn = connect_redis(redis_host, redis_port)
     
     # Retrieve the training data from Redis
     training_data = retrieve_from_redis(redis_conn, 'train')
@@ -88,10 +88,7 @@ def main():
     model = train_adaboost(data)
     
     # Save the trained model to a file
-    joblib.dump(model, 'adaboost_model.pkl')
+    joblib.dump(model, model_path)
     
     # Evaluate the model
-    evaluate_model('adaboost_model.pkl', 'train')
-
-if __name__ == "__main__":
-    main()
+    return evaluate_model(model_path, 'train')

@@ -67,7 +67,7 @@ def store_datasets_to_redis(redis_conn, datasets, dataset_names):
         store_to_redis(redis_conn, name, dataset.to_csv(index=False))
         print(f"Dataset '{name}' saved to Redis.")
 
-def main(mariadb_config, mongodb_config, redis_config):
+def transform(mariadb_config, mongodb_config, redis_config):
     # Connect to databases
     mariadb_conn = connect_mariadb(mariadb_config['host'], mariadb_config['user'], mariadb_config['password'])
     create_mariadb_database(mariadb_conn, mariadb_config['database'])
@@ -134,4 +134,4 @@ if __name__ == "__main__":
         'host': 'localhost',
         'port': 6379
     }
-    main(mariadb_config, mongodb_config, redis_config)
+    transform(mariadb_config, mongodb_config, redis_config)

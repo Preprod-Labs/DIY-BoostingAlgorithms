@@ -31,8 +31,8 @@ def prepare_input(age, years_at_company, monthly_income, job_satisfaction, perfo
         'HR': 0,
         'Engineering': 1,
         'Sales': 2,
-        'Marketing': 3,
-        'Finance': 4
+        'Accounting': 3,
+        'Customer Service': 4
     }
     department_value = departments.get(department, -1)
     
