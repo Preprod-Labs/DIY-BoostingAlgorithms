@@ -22,12 +22,13 @@
 
 import streamlit as st # For creating the web app
 
-from ingest import ingest_data
-from transform import transform
-from train_adaboost import train_model as train_adaboost_model
-from train_gbm import train_model as train_gbm_model
-from model_inference import model_inference
-from manual_prediction import manual_prediction
+# Importing the necessary .py helper files and functions
+from ingest import ingest_data # For ingesting data from MariaDB and MongoDB
+from transform import transform # For transforming and preprocessing the data
+from train_adaboost import train_model as train_adaboost_model # For training the AdaBoost model
+from train_gbm import train_model as train_gbm_model # For training the GBM model
+from model_inference import model_inference # For getting the model metrics
+from manual_prediction import manual_prediction # For manual user inputs
 
 # Setting the page configuration for the web app
 st.set_page_config(page_title="Boosting Algorithms", page_icon=":chart_with_upwards_trend:", layout="centered")
@@ -83,6 +84,7 @@ if "gbm_model_path" not in st.session_state:
 tab1, tab2, tab3, tab4 = st.tabs(["Model Config","Model Training","Model Evaluation", "Model Prediction"])
 
 with tab1:
+    # Model Configuration tab
     st.subheader("Model Configuration")
     st.write("This is where you can configure the model.")
     st.divider()
@@ -95,18 +97,23 @@ with tab1:
             st.markdown("<h2 style='text-align: center; color: white;'>MariaDB Configuration</h2>", unsafe_allow_html=True)
             st.write(" ")
             
+            # MariaDB Host
             mariadb_host = st.text_input("MariaDB Host", st.session_state.mariadb_host)
             st.session_state.mariadb_host = mariadb_host
             
+            # MariaDB User
             mariadb_user = st.text_input("MariaDB User", st.session_state.mariadb_user)
             st.session_state.mariadb_user = mariadb_user
             
+            # MariaDB Password
             mariadb_password = st.text_input("MariaDB Password", st.session_state.mariadb_password, type="password")
             st.session_state.mariadb_password = mariadb_password
             
+            # MariaDB Database
             mariadb_database = st.text_input("MariaDB Database", st.session_state.mariadb_database)
             st.session_state.mariadb_database = mariadb_database
             
+            # MariaDB configuration dictionary
             maridb_config = {
                 "host": st.session_state.mariadb_host,
                 "user": st.session_state.mariadb_user,
@@ -119,15 +126,19 @@ with tab1:
             st.markdown("<h2 style='text-align: center; color: white;'>MongoDB Configuration</h2>", unsafe_allow_html=True)
             st.write(" ")
             
+            # MongoDB Host
             mongodb_host = st.text_input("MongoDB Host", st.session_state.mongodb_host)
             st.session_state.mongodb_host = mongodb_host
             
+            # MongoDB Port
             mongodb_port = st.number_input("MongoDB Port", st.session_state.mongodb_port)
             st.session_state.mongodb_port = mongodb_port
             
+            # MongoDB Database
             mongodb_database = st.text_input("MongoDB Database", st.session_state.mongodb_database)
             st.session_state.mongodb_database = mongodb_database
             
+            # MongoDB configuration dictionary
             mongodb_config = {
                 "host": st.session_state.mongodb_host,
                 "port": st.session_state.mongodb_port,
@@ -139,12 +150,15 @@ with tab1:
             st.markdown("<h2 style='text-align: center; color: white;'>Redis Configuration</h2>", unsafe_allow_html=True)
             st.write(" ")
             
+            # Redis Host
             redis_host = st.text_input("Redis Host", st.session_state.redis_host)
             st.session_state.redis_host = redis_host
             
+            # Redis Port
             redis_port = st.number_input("Redis Port", st.session_state.redis_port)
             st.session_state.redis_port = redis_port
             
+            # Redis configuration dictionary
             redis_config = {
                 "host": st.session_state.redis_host,
                 "port": st.session_state.redis_port
@@ -155,12 +169,15 @@ with tab1:
             st.markdown("<h2 style='text-align: center; color: white;'>Paths Configuration</h2>", unsafe_allow_html=True)
             st.write(" ")
             
+            # Master Data Path
             master_data_path = st.text_input("Master Data Path", st.session_state.master_data_path)
             st.session_state.master_data_path = master_data_path
             
+            # AdaBoost Model Path
             adaboost_model_path = st.text_input("AdaBoost Model Path", st.session_state.adaboost_model_path)
             st.session_state.adaboost_model_path = adaboost_model_path
             
+            # GBM Model Path
             gbm_model_path = st.text_input("GBM Model Path", st.session_state.gbm_model_path)
             st.session_state.gbm_model_path = gbm_model_path
     
@@ -168,6 +185,7 @@ with tab1:
             st.success("Configuration saved successfully! ✅")
     
 with tab2:
+    # Model Training tab
     st.subheader("Model Training")
     st.write("This is where you can train the model.")
     st.divider()
@@ -198,6 +216,7 @@ with tab2:
         st.text(classification_report)
             
 with tab3:
+    # Model Evaluation tab
     st.subheader("Model Evaluation")
     st.write("This is where you can see the current metrics of the most recently saved models")
     st.divider()
@@ -255,6 +274,7 @@ with tab3:
     st.text(supervalidationClassificationReport)
     
 with tab4:
+    # Model Prediction tab
     st.subheader("Model Prediction")
     st.write("This is where you can predict employee attrition.")
     
@@ -263,6 +283,7 @@ with tab4:
         selected_model = st.selectbox("Select the model to predict", ["AdaBoost", "GBM"])
         selected_model_path = st.session_state.adaboost_model_path if selected_model == "AdaBoost" else st.session_state.gbm_model_path
         
+        # Input fields for prediction
         age = st.number_input("Age", min_value=21, max_value=55)
         years_at_company = st.number_input("Years at Company", min_value=2, max_value=34, value=17)
         monthly_income = st.number_input("Monthly Income", min_value=50000, max_value=600000, value=300000)
@@ -275,5 +296,3 @@ with tab4:
         if st.form_submit_button("Predict"):
             prediction = manual_prediction(selected_model_path, age, years_at_company, monthly_income, job_satisfaction, performance_rating, work_life_balance, training_hours_last_year, department)
             st.success(f"Prediction: {prediction} ✅")
-    
-    
