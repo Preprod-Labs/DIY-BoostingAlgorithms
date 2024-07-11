@@ -69,19 +69,3 @@ def ingest_data(csv_path, mariadb_config, mongodb_config):
     mongodb_db = connect_mongodb(mongodb_config['host'], mongodb_config['port'], mongodb_config['database'])
     mongodb_collection = create_mongodb_collection(mongodb_db, 'employees')
     store_to_mongodb(mongodb_collection, mongodb_data)
-    
-if __name__ == "__main__":
-    # Configuration for MariaDB and MongoDB
-    mariadb_config = {
-        'host': 'localhost',
-        'user': 'root',
-        'password': 'password',
-        'database': 'preprod'
-    }
-    mongodb_config = {
-        'host': 'localhost',
-        'port': 27017,
-        'database': 'preprod'
-    }
-    csv_path = 'Data/Master/mock_data.csv'
-    ingest_data(csv_path, mariadb_config, mongodb_config)

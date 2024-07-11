@@ -25,7 +25,7 @@ Mock data for learning purposes with features: Employee ID, Age, Years at Compan
 - **Code/**: Contains all the scripts for data ingestion, transformation, loading, evaluation, model training, inference, manual prediction, and web application.
 - **Data/**: Contains the raw mock data.
 
-## Data Splitting
+### Data Splitting
 
 - **Training Samples**: 600
 - **Testing Samples**: 150

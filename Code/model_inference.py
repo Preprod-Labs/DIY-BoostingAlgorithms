@@ -32,6 +32,3 @@ def model_inference(model_path):
     supervalidationAccuracy, supervalidationClassificationReport = evaluate_model(model_path, 'supervalidation')
 
     return testAccuracy, testClassificationReport, validationAccuracy, validationClassificationReport, supervalidationAccuracy, supervalidationClassificationReport
-
-if __name__ == "__main__":
-    model_inference('adaboost_model.pkl')

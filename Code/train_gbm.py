@@ -22,10 +22,8 @@
             # Scikit-learn 1.5.1
             # Pandas 2.2.2
             # Joblib 1.4.2
-            # SHAP 0.46.0
 
 import joblib                                           # For saving the trained model
-# import shap                                           # For SHAP value interpretation
 from sklearn.ensemble import GradientBoostingClassifier # For training the model
 from sklearn.model_selection import GridSearchCV        # For hyperparameter tuning
 from io import StringIO                                 # For reading the data string
@@ -64,18 +62,6 @@ def train_gbm(data):
     # Get the best model from the grid search
     best_model = grid_search.best_estimator_
 
-    # # Explain the model using SHAP for one random data point
-    # import numpy as np
-    # random_idx = np.random.choice(X.shape[0])  # Choose a random index
-    # X_sample = X.iloc[[random_idx]]  # Extract the sample
-    # explainer = shap.Explainer(best_model, X)
-    # shap_values = explainer(X_sample)
-    
-    # # Generate SHAP summary plot for the single data point
-    # shap.initjs()
-    # # Summary plot for the sample's SHAP values
-    # shap.summary_plot(shap_values, X_sample, feature_names=X.columns)
-
     return best_model
 
 def train_model(redis_host, redis_port, model_path):
@@ -97,6 +83,3 @@ def train_model(redis_host, redis_port, model_path):
     
     # Evaluate the model on the training dataset
     return evaluate_model(model_path, 'train')
-
-if __name__ == "__main__":
-    train_model()

@@ -21,10 +21,8 @@
             # Scikit-learn 1.5.1
             # Pandas 2.2.2
             # Joblib 1.4.2
-            # SHAP 0.46.0
 
 import joblib                                       # For saving the model
-# import shap                                       # For SHAP value interpretation
 from sklearn.ensemble import AdaBoostClassifier     # For training the model
 from sklearn.model_selection import GridSearchCV    # For hyperparameter tuning
 from io import StringIO                             # For reading the data string
@@ -58,18 +56,6 @@ def train_adaboost(data):
     
     # Get the best model from the grid search
     best_model = grid_search.best_estimator_
-
-    # # Explain the model using SHAP for one random data point
-    # import numpy as np
-    # random_idx = np.random.choice(X.shape[0])  # Choose a random index
-    # X_sample = X.iloc[[random_idx]]  # Extract the sample
-    # explainer = shap.KernelExplainer(best_model.predict_proba, X_sample)
-    # shap_values = explainer.shap_values(X_sample)
-
-    # # Generate SHAP summary plot for the single data point
-    # shap.initjs()
-    # # Summary plot for the sample's SHAP values
-    # shap.summary_plot(shap_values, X_sample, feature_names=X.columns)
 
     return best_model
 

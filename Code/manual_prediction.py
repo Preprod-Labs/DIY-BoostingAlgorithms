@@ -73,6 +73,3 @@ def manual_prediction(model_path, age, years_at_company, monthly_income, job_sat
     # Print the prediction result
     print(f"Prediction: {prediction}")
     return prediction
-
-if __name__ == "__main__":
-    manual_prediction('adaboost_model.pkl', 21, 5, 60000, 3, 3, 3, 50, 'Engineering')

@@ -95,6 +95,3 @@ def retrieve_from_mariadb(conn, query): # For retrieving data from MariaDB
 def retrieve_from_mongodb(collection, query): # For retrieving data from MongoDB
     cursor = collection.find(query)
     return pd.DataFrame(list(cursor))
-
-if __name__ == "__main__":
-    pass

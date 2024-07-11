@@ -117,21 +117,3 @@ def transform(mariadb_config, mongodb_config, redis_config):
     # Store datasets to Redis
     datasets = [train, test, validation, supervalidation]
     store_datasets_to_redis(redis_conn, datasets, dataset_names)
-
-if __name__ == "__main__":
-    mariadb_config = {
-        'host': 'localhost',
-        'user': 'root',
-        'password': 'password',
-        'database': 'preprod'
-    }
-    mongodb_config = {
-        'host': 'localhost',
-        'port': 27017,
-        'database': 'preprod'
-    }
-    redis_config = {
-        'host': 'localhost',
-        'port': 6379
-    }
-    transform(mariadb_config, mongodb_config, redis_config)
